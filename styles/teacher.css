@@ -1,0 +1,63 @@
+body{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.topcontainer{
+    padding-top: 0px;
+    text-align: center;
+    font-family: 'Island Moments', cursive;
+    background-color: rgba(22, 160, 133,0.7) ;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.studentcon
+{
+    padding-top: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    
+}
+table, th, td {
+    border: 1px solid;
+}
+td{
+    width: 500px;
+}
+.addcontainer
+{
+    margin-top: 50px;
+   
+    
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+.inputfield
+{
+    margin: 10px;
+    height: 45px;
+    width: 400px;
+    
+}
+.btn
+{
+    
+    height: 40px;
+    width:350px;
+}
+input
+{
+    font-size: 20px;
+}
+button{
+    margin-top: 50px;
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+    background-color: orange;
+}

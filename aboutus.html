@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolphine care</title>
+    <link rel="shortcut icon" href="images/favicon (1).ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/chat.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="topcontainer">
+        <img style="position: absolute; left: 50px; height: 100px;" src="images/dolphine.png" alt="">
+        <h1 style="color: white" >DOLPHIN CARE</h1>
+        <a style="position: absolute; right: 50px; font-size: 20px; margin-top: 30px;" href="index.html"><img style="height: 30px;" src="images/home.png" alt=""></a>
+    </div>
+    <div class="container">
+        <div class="aboutus">
+            <br><br><br>
+            <h2>DOLPHIN CARE
+                <br> STAY ACQUAINTED
+                 </h2>
+                 <p>The Communications App designed for simple and effective communications delivering greater pastoral care and better educational outcomes for your school.</p>
+         
+        </div>
+        <div>
+            <img src="images/dolphine.png" alt="">
+        </div>
+        
+    </div>
+    <div class="improve">
+        <h2>AIMING TO IMPROVE EDUCATIONAL RESULTS</h2>
+        <p>Dolphincare offers your school  a straight forward and effective platform and effective platform <br> to make sure that every pupil,parent,guardian,teacher,coach,staff member or School  Director is <br> always aware  of and upto date  with all planned sports,extracurricular,music or school vocational activities. <br><br>With Dolphin Care you stay acquainted</p>
+    </div>
+    <div class="webapp" >
+        <h2>The DOLPHIN CARE WEBAPP</h2>
+        <p>In order to enable the efficient communication to students and parents that is so important in the <br> fast-paced and connected world we live in today, it was designed in collaboration with educators <br> and for institutions. While central web-based systems and education portals offer fantastic management that is <br>focused on education, there is frequently a gap when it comes to assistance and efficient two-way communication,<br> particularly for, but not limited to, the following areas:</p>
+    </div>
+    <div class="container">
+        <div class="parent">
+            <img src="images/students-parents.png" alt="">
+            <h2>Students and Parents</h2>
+            <li> Any changes are immediately updated via email and/or SMS with two-way notifications, keeping you proactive about events and providing dates, times, locations, maps, and weather.</li>
+            <li>Additionally, the DolphinCare app gives all students and parents access to all activity details with just one click.</li>
+        </div>
+        <div class="parent">
+            <img src="images/coaches-teachers-staff.png" alt="">
+            <h2>Coaches, Teachers and Staff</h2>
+            <li>Secure web-based access by any web-enabled device. Manage and send out activity notifications and updates/changes with all the vital info for students and parents </li>
+            <li>Perform roll calls via hand-held devices in real-time at the activity to assure student pastoral care</li>
+        </div>
+    </div>
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+<br><br><br><br><br>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="scripts/responses.js"></script>
+<script src="scripts/chat.js"></script>
+
+</html>

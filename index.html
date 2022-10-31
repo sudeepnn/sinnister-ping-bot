@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolphine care</title>
+    <link rel="shortcut icon" href="images/favicon (1).ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="topcontainer">
+        <img style="position: absolute; left: 50px; height: 100px;" src="images/dolphine.png" alt="">
+        <h1 style="color: white" >DOLPHIN CARE</h1>
+        <a class="about" href="aboutus.html" id="redirect">About us</a>
+    </div>
+    <div class="login">
+        <div class="parent">
+            <br>
+            <h2>Are you a Parent..?</h2>
+            <table>
+                <tr>
+                    <td> USER ID</td>
+                    <td><input type="text" class="inputfield" name="" id="" placeholder="Enter your Mail or UserID"></td>
+                </tr>
+                <tr>
+                    <td> PASSWORD</td>
+                    <td><input class="inputfield" type="password" name="" id="" placeholder="Password"> </td>
+                </tr>
+            </table>
+            <br>
+            <button  onClick="parent.location='parent.html'">SUBMIT</button>
+        </div>
+        <div class="teacher">
+            <br>
+            <h2>Are you a Teacher..?</h2>
+            <table>
+                <tr>
+                    <td> USER ID</td>
+                    <td><input type="text" class="inputfield" name="" id="eml" placeholder="Enter your Mail or UserID"></td>
+                </tr>
+                <tr>
+                    <td> PASSWORD</td>
+                    <td><input class="inputfield" type="password" name="" id="pwd" placeholder="Password"> </td>
+                </tr>
+            </table>
+            <br>
+            <button  onClick="parent.location='teach.html'">SUBMIT</button>
+        </div>
+    </div>
+    <br>
+    Don't have an account? <a href="loginform.html">Register</a> <br>
+    <br>Get the app. <br> <br>
+    <img style="height: 40px;" src="images/IVTO2Hh-l3g.png" alt="">
+    <div class="footer">
+        <br>
+       <p> Dolphin Care, Stay Acquainted  <br>  <br> copy write © 2022  Dolphine care </p>
+    </div>
+    
+
+    <!-- <script type="module">
+          // Import the functions you need from the SDKs you need
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+          import {getAuth,signInWithEmailAndPassword,createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+          import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js'
+          // TODO: Add SDKs for Firebase products that you want to use
+          // https://firebase.google.com/docs/web/setup#available-libraries
+        
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          const firebaseConfig = {
+          apiKey: "AIzaSyAvaeTkYtKJ26MkRsv_H7jwWAl4_arnYzY",
+          authDomain: "dolphin-13031.firebaseapp.com",
+          projectId: "dolphin-13031",
+          storageBucket: "dolphin-13031.appspot.com",
+          messagingSenderId: "443812766364",
+          appId: "1:443812766364:web:6d535b8ad94ab78e308359",
+        };
+        
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+          const auth = getAuth(app);
+        
+          // console.log("auth"+ap)
+          var login=document.getElementById('submit')
+        
+          
+
+          login.addEventListener('click',(e)=>{
+           
+   var email = document.getElementById('email').value;
+   var password = document.getElementById('password').value;
+
+      signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+
+        const dt = new Date();
+         update(ref(database, 'users/' + user.uid),{
+          last_login: dt,
+        })
+
+         alert('User loged in!');
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        alert(errorMessage);
+  });
+
+ });
+        </script> -->
+</body>
+</html>

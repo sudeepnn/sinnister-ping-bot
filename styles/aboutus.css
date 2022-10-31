@@ -1,0 +1,51 @@
+.topcontainer{
+    padding-top: 0px;
+    text-align: center;
+    font-family: 'Island Moments', cursive;
+    background-color: rgba(22, 160, 133,0.7) ;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.container
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.aboutus
+{
+    font-size: 20px;
+    width: 600px;
+    align-items: center;
+}
+.improve
+{
+    color: white;
+   font-size: 20px;
+   margin-top: 20px;
+   padding: 10px;
+    width: 100vw;
+    height: 200px;
+    background-color: rgba(22, 160, 133,0.7) ;
+}
+.webapp
+{
+    
+   font-size: 20px;
+   margin-top: 20px;
+   padding: 10px;
+    width: 100vw;
+    height: 200px;
+    
+}
+.parent
+{
+   
+    font-size: 20px;
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

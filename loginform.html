@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="shortcut icon" href="images/favicon (1).ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+  <title>Create Account</title>
+</head>
+
+<body>
+  <div class="b">
+    <div class="topcontainer">
+      <img style="position: absolute; left: 50px; height: 100px;" src="images/dolphine.png" alt="">
+      <h1 style="color: white ; margin-top: 20px;">DOLPHIN CARE</h1>
+
+    </div> <a style="position: absolute; right: 50px; font-size: 20px; margin-top: 30px;" href="index.html"><img
+        style="height: 30px;" src="images/home.png" alt=""></a>
+  </div>
+  <div class="container">
+    <form id="create-form"  action="/">
+      <!--# in action paste new page link so that submit button will display new page-->
+
+      <!-- <div class="labels">
+        <label id="name-label" for="name"> Full nmName</label>
+      </div>
+      <div class="input-tab">
+        <input class="input-field" type="text" id="name" name="name" placeholder="" required autofocus>
+      </div> -->
+      <form id="create-form" method="POST" action="/index.html">
+      <div class="labels">
+        <label  for="email"> Email</label>
+      </div>
+      <div class="input-tab">
+        <input class="input-field" type="email" id="eml"  placeholder="" required value="">
+      </div>
+
+      <div class="labels">
+        <label for="pwd"> Password</label>
+      </div>
+      <div class="input-tab">
+        <input class="input-field" type="password" id="pwd"  value="">
+      </div>
+
+      <div class="labels">
+
+        <label>You Are</label>
+      </div>
+      <div class="input-tab">
+        <div class="a">
+          <input type="radio" name="radio-button" value="teacher">Teacher
+          <input type="radio" name="radio-button" value="parent">Parent
+        </div>
+
+      </div>
+
+      <div class="labels">
+        <label id="name-label" for="quantity"> Number of children</label>
+      </div>
+      <div class="input-tab">
+        <input class="input-field" type="number" id="quantity" name="quantity" placeholder="" required autofocus>
+      </div>
+
+
+      <div class="labels">
+        <label for="comments">Name of Children</label>
+      </div>
+      <div class="input-tab">
+        <textarea class="input-field" id="comments" name="comments" rows="10" cols="40" placeholder=""></textarea>
+      </div>
+
+      <div class="btn" id="btn">
+        <button  id="submit" type="submit" >Submit</button>
+      </div>
+    </form>
+  </div>
+  <br>
+</body>
+<script type="module">
+console.log(submitData)
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+  import {getAuth,signInWithEmailAndPassword,createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+  import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js'
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+  apiKey: "AIzaSyAvaeTkYtKJ26MkRsv_H7jwWAl4_arnYzY",
+  authDomain: "dolphin-13031.firebaseapp.com",
+  projectId: "dolphin-13031",
+  storageBucket: "dolphin-13031.appspot.com",
+  messagingSenderId: "443812766364",
+  appId: "1:443812766364:web:6d535b8ad94ab78e308359",
+};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // console.log("auth"+ap)
+  var submitData=document.getElementById('btn')
+console.log(submitData)
+
+  submitData.addEventListener('click',(e)=>{
+  e.preventDefault()
+    console.log(submitData)
+  
+    
+    var email=document.getElementById('eml').value;
+    var password=document.getElementById('pwd').value;
+
+    console.log(password)
+    console.log(email)
+
+    
+     createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+   
+    const user = userCredential.user;
+    alert("successfull")
+   
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    
+    alert(errorMessage+errorCode)
+  });
+});
+</script>
+
+</html>
